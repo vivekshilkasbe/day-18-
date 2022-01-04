@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+/**
+ *
+ * @returns jsx => xml
+ */
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* <div>Hello World</div>
+      <div>Hello Universe</div> */}
+      {/* <Sum></Sum> */}
+      <Sum />
+      <Sum />
+      <Sum />
     </div>
   );
 }
+/**
+ * html pre defined tags
+ * react user defined tags => components
+ * <div> </div>
+ * <Sum></Sum>
+ * @returns
+ */
 
-export default App;
+export function Sum() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <p>lorem</p>
+    </div>
+  );
+}
