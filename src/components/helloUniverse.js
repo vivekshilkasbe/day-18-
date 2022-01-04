@@ -1,6 +1,6 @@
 import "./HelloUniverse.css";
 
-export default function hellouniverse() {
+export default function HelloUniverse() {
   return (
     <div className="beautify p-2">
       <h1>Hello Universe</h1>
