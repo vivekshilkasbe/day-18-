@@ -9,18 +9,36 @@ export default function App() {
 }
 
 function MyComponent() {
-  const id = 1;
-  const msg = "Hello World,How are you ";
-  const btnMsg = "Click me..";
-  const hello = () => {
-    console.log("function called");
-    alert("thank you");
+  // const id = 1;
+  // let counter = 1;
+  let [counter, setCounter] = useState(1);
+
+  const increament = () => {
+    counter = counter + 1;
+    console.log("increament called", counter);
+    setCounter(counter);
   };
 
   return (
     <div>
-      <div id={id}>{msg}</div>
-      <input type="button" value={btnMsg} onClick={hello} />
+      <h1>Counter Application</h1>
+      <div>like {counter}</div>
+      <input type="button" value="like me" onClick={increament} />
+      <div>
+        <h1>Like {counter}</h1>
+      </div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
+      <div>like {counter}</div>
     </div>
   );
 }
