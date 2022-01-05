@@ -9,36 +9,30 @@ export default function App() {
 }
 
 function MyComponent() {
-  // const id = 1;
-  // let counter = 1;
-  let [counter, setCounter] = useState(1);
-
-  const increament = () => {
-    counter = counter + 1;
-    console.log("increament called", counter);
-    setCounter(counter);
+  const [list, setList] = useState(["Hello World"]);
+  const tweetHere = () => {
+    const newList = [...list, "Hello Universe"];
+    setList(newList);
   };
-
+  const deleteTweet = () => {
+    alert();
+  };
   return (
     <div>
-      <h1>Counter Application</h1>
-      <div>like {counter}</div>
-      <input type="button" value="like me" onClick={increament} />
-      <div>
-        <h1>Like {counter}</h1>
+      <h1>workingg with input elements</h1>
+      <input className="" type="text" placeholder="Ask me" />
+      <input
+        className=""
+        type="button"
+        value="Tweet here"
+        onClick={tweetHere}
+      />
+      <input type="button" value="Delete" onClick={deleteTweet} />
+      <div id="parent">
+        {list.map((item) => (
+          <div>{item}</div>
+        ))}
       </div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
-      <div>like {counter}</div>
     </div>
   );
 }
